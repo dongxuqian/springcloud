@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dong</groupId>
+    <artifactId>springcloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>miaosha-common</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud-dependencies>Hoxton.SR3</spring-cloud-dependencies>
+        <spring-cloud-alibaba-dependencies>2.2.1.RELEASE</spring-cloud-alibaba-dependencies>
+        <spring-cloud-alibaba-nacos>2.2.1.RELEASE</spring-cloud-alibaba-nacos>
+        <spring-cloud-starter-openfeign>2.2.1.RELEASE</spring-cloud-starter-openfeign>
+        <spring-cloud-starter-gateway>2.2.5.RELEASE</spring-cloud-starter-gateway>
+        <lombok.version>1.18.8</lombok.version>
+        <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
+        <spring-redis.version>2.2.2.RELEASE</spring-redis.version>
+
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- cloud依赖            -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR3</version>
+            </dependency>
+            <!-- alibaba依赖            -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies}</version>
+            </dependency>
+            <!-- nacos依赖            -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${spring-cloud-alibaba-nacos}</version>
+            </dependency>
+            <!--  openfeign      -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-starter-openfeign}</version>
+            </dependency>
+            <!--   gateway         -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${spring-cloud-starter-gateway}</version>
+            </dependency>
+            <!--  mysql          -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <!--  redis  -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-redis.version}</version>
+            </dependency>
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
